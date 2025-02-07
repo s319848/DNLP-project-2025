@@ -1,1 +1,11 @@
-This is a test README file to see if everything works
+This repository contains the code used for the project for the 2025 course of Deep Natural Language Processing for the group "Plumbers".
+
+# Content
+
+## models
+This folder contains the models we used and/or fine-tuned, in order to avoid re-training or re-finetuning the models every time.
+
+## notebooks
+This folder contains all the .ipynb files used to develop the project. Inside the folder there are the general files like the one used for the evaluation of the hyperparameters. The folders "First-extension" and "Second-extension" contain the file used to work on the extensions for the base model.
+
+  
