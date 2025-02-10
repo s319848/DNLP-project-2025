@@ -20,7 +20,7 @@ This folder contains all the .ipynb files used to develop the project. The folde
 ### First-extension
 Contains the file used to develop the first extension
 
-- ```extension1_fine_tune_model.ipynb``` contains the fine-tuning process of all-MiniLM-L6-v2. The fine-tuned model has been manually downloaded and uploaded on github to be used in the other files.
+- ```extension1_fine_tune_model.ipynb``` contains the fine-tuning process of all-MiniLM-L6-v2. The fine-tuned model has been manually downloaded and uploaded on github to be used in the other files. Do not run the last set of cells if you don't want to download the model.
   Total expected runtime: about 25m
   
 - ```fine_tuned_model_evaluation.ipynb``` contains the evaluation of the fine-tuned model in the same way the base model has been evaluated. Can be launched as it is since it retrieves the model from GitHub.
@@ -30,5 +30,8 @@ Contains the file used to develop the first extension
   Total expected runtime: about 15m
 
   ### Second-extension
+Contains the file used to develop the second extension
 
+- ```Frequent_POS_sequence_Extraction.ipynb``` contains...
+    Total expected runtime: about 1h 10m
   
