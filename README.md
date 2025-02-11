@@ -29,7 +29,7 @@ Contains the file used to develop the first extension
 - ```Evaluation_SciBERT.ipynb``` contains the evaluation of SciBERT model in the same way the base model has been evaluated. Can be launched as it is since it retrieves the model from HuggingFace.
   Total expected runtime: about 15m
 
-  ### Second-extension
+### Second-extension
 Contains the file used to develop the second extension
 
 - ```Frequent_POS_sequence_Extraction.ipynb``` contains the extraction of frequent POS combinations found in keywords of the ground truth (20% of Krapivin2009 has been evaluated). Combinations are found through 2 different methods. Results for both methods are saved in csv files, respectively ```keywords_combinations_method_one``` and ```keywords_combinations_method_two```. Can be launched as it is since it retrieves the model from GitHub.
