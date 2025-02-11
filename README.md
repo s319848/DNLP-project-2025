@@ -11,27 +11,37 @@ This folder contains the model(s) we used and/or fine-tuned, in order to avoid r
 ## notebooks
 This folder contains all the .ipynb files used to develop the project. The folders "First-extension" and "Second-extension" contain the file used to work on the extensions for the base model.
 
-- ```hyperparameter_tuning.ipynb``` is used for the evaluation of two hyperparameters: n_gram range [(1,2), (1,3)] and distance metric [cosine_similarity, maxsum, mmr]. All three distance metrics are evaluated in the file, but to change the n_gram length it is necessary to manually modify the variable clearly visible in the code.
+- ```Hyperparameter_tuning.ipynb``` is used for the evaluation of two hyperparameters: n_gram range [(1,2), (1,3)] and distance metric [cosine_similarity, maxsum, mmr]. All three distance metrics are evaluated in the file, but to change the n_gram length it is necessary to manually modify the variable clearly visible in the code.
   Total expected runtime: about 1h for n_gram=(1,2), 2h for n_gram=(1,3)
 
-- ```base_model_evaluation.ipynb``` evaluates the base version of KeyBERT on the Nguyen2007 and SemEval2010 datasets. The file can be launched as it is.
+- ```Evaluation_Base_Model.ipynb``` evaluates the base version of KeyBERT on the Nguyen2007 and SemEval2010 datasets. The file can be launched as it is.
   Total expected runtime: about 15m
 
 ### First-extension
 Contains the file used to develop the first extension
 
-- ```extension1_fine_tune_model.ipynb``` contains the fine-tuning process of all-MiniLM-L6-v2. The fine-tuned model has been manually downloaded and uploaded on github to be used in the other files. Do not run the last set of cells if you don't want to download the model.
+- ```Fine_Tuning_Model.ipynb``` contains the fine-tuning process of all-MiniLM-L6-v2. The fine-tuned model has been manually downloaded and uploaded on github to be used in the other files. Do not run the last set of cells if you don't want to download the model.
   Total expected runtime: about 25m
   
-- ```fine_tuned_model_evaluation.ipynb``` contains the evaluation of the fine-tuned model in the same way the base model has been evaluated. Can be launched as it is since it retrieves the model from GitHub.
+- ```Evaluation_Fine_Tuned_Model.ipynb``` contains the evaluation of the fine-tuned model in the same way the base model has been evaluated. Can be launched as it is since it retrieves the model from GitHub.
   Total expected runtime: about 15m
   
-- ```scibert_evaluation.ipynb``` contains the evaluation of SciBERT model in the same way the base model has been evaluated. Can be launched as it is since it retrieves the model from HuggingFace.
+- ```Evaluation_SciBERT.ipynb``` contains the evaluation of SciBERT model in the same way the base model has been evaluated. Can be launched as it is since it retrieves the model from HuggingFace.
   Total expected runtime: about 15m
 
   ### Second-extension
 Contains the file used to develop the second extension
 
-- ```Frequent_POS_sequence_Extraction.ipynb``` contains...
+- ```Frequent_POS_sequence_Extraction.ipynb``` contains the extraction of frequent POS combinations found in keywords of the ground truth (20% of Krapivin2009 has been evaluated). Combinations are found through 2 different methods. Results for both methods are saved in csv files, respectively '''keywords_combinations_method_one''' and '''keywords_combinations_method_two'''. Can be launched as it is since it retrieves the model from GitHub.
     Total expected runtime: about 1h 10m
+
+-'''Select_extracted_keyword_based_on_POS.ipynb''' contains the filtering of KeyBERT extracted keywords. POS tagging of keywords extracted is computed through two different methods (same used in ```Frequent_POS_sequence_Extraction.ipynb``'). Keywords of both methods are filtered to match most frequent POS combinations in '''keywords_combinations_method_one.csv''' and '''keywords_combinations_method_two.csv''', respectively, and saved in '''extension2_extraction_dataset_method_one.csv''' and '''extension2_extraction_dataset_method_two.csv''', respectively, where '''dataset''' is the name of the dataset used, Nguyen2007 and SemEval2010. Can be launched as it is since it retrieves the model and data from GitHub.
+
+-'''Evaluation_for_Extension2.ipynb''' contains the evaluation of keywords in '''extension2_extraction_dataset_method_one.csv''' and '''extension2_extraction_dataset_method_two.csv''' for both datasets Nguyen2007 and SemEval2010, computed as in ```Evaluation_Base_Model.ipynb```. Can be launched as it is since it retrieves data from GitHub.
+
+-'''keywords_combinations_method_one.csv''' and '''keywords_combinations_method_one.csv''' contain frequent POS combinations found in ```Frequent_POS_sequence_Extraction.ipynb```, obtained with two different methods.
+
+-'''extension2_extraction_dataset_method_one.csv''' and '''extension2_extraction_dataset_method_two.csv''' contain keywords computed after the filtering done in '''Select_extracted_keyword_based_on_POS.ipynb''' where datasets are Nguyen2007 and SemEval2010.
+
+-'''extension2_groundtruth_dataset.csv''' contains ground truth keywords, where datasets are Nguyen2007 and SemEval2010.
   
