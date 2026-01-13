@@ -35,7 +35,7 @@ Contains the file used to develop the first extension
   Total expected runtime: about 15m
 
 ### Second-extension
-Contains the file used to develop the second extension
+Contains the file used to develop the second extension:
 
 - ```Frequent_POS_sequence_Extraction.ipynb``` contains the extraction of frequent POS combinations found in keywords of the ground truth (20% of Krapivin2009 has been evaluated). Combinations are found through 2 different methods. Results for both methods are saved in csv files, respectively ```keywords_combinations_method_one``` and ```keywords_combinations_method_two```. It can be launched as it is since it retrieves the model from GitHub.
     Total expected runtime: about 1h 10m
